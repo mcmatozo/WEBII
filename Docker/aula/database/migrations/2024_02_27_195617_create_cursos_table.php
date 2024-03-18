@@ -21,6 +21,7 @@ return new class extends Migration
             $table->foreign('nivel_id')->references('id')->on('niveis');
             $table->foreign('eixo_id')->references('id')->on('eixos');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

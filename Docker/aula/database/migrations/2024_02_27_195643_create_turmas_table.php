@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreign('curso_id')->references('id')->on('cursos');
             $table->integer('ano');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
