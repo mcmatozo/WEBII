@@ -20,4 +20,12 @@ class Curso extends Model
     public function turma() {
         return $this->hasMany('\App\Models\Turma');
     }
+
+    public function categoria() {
+        return $this->hasMany('\App\Models\Categoria');
+    }
+
+    public function user() {
+        return $this->hasMany('\App\Models\User');
+    }
 }
