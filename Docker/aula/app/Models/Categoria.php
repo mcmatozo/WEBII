@@ -7,9 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Categoria extends Model
 {
+    use HasFactory;
+
     public function curso() {
         return $this->belongsTo('\App\Models\Curso');
     }
 
-    use HasFactory;
+    public function comprovante() {
+        return $this->hasMany('\App\Models\Comprovante');
+    }
+
+    
 }

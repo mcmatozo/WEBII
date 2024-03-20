@@ -54,9 +54,13 @@ class TurmaController extends Controller
      * Display the specified resource.
      */
     public function show(string $id)
-    {
+    {   
+        
         $data = $this->repository->findById($id);
-        return $data;   
+        if(isset($data)){
+            return $data;
+        }   
+        return "<h1>show - ERRO!</h1>";
     }
 
     /**
