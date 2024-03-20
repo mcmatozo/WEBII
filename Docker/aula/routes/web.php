@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return "Olá";
 });
 
 Route::resource('/eixo', 'App\Http\Controllers\EixoController');
@@ -24,3 +24,4 @@ Route::resource('/categoria', 'App\Http\Controllers\CategoriaController');
 Route::resource('/usuario', 'App\Http\Controllers\UserController');
 Route::resource('/comprovante', 'App\Http\Controllers\ComprovanteController');
 Route::resource('/declaracao', 'App\Http\Controllers\DeclaracaoController');
+Route::resource('/aluno', 'App\Http\Controllers\AlunoController');
